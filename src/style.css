@@ -1,0 +1,250 @@
+:root {
+  --bg: #07090b;
+  --panel: #10151a;
+  --line: #1e272f;
+  --text: #eef4f1;
+  --muted: #8b9aa4;
+  --mint: #00e59b;
+  --mint-dim: #00b87c;
+  --warn: #ffb020;
+  --danger: #ff5d5d;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  font-family: "Segoe UI", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100%;
+}
+body {
+  background-image:
+    radial-gradient(900px 500px at 10% -10%, rgba(0, 229, 155, 0.12), transparent 55%),
+    radial-gradient(700px 400px at 100% 0%, rgba(80, 140, 255, 0.1), transparent 50%);
+}
+a {
+  color: var(--mint);
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(7, 9, 11, 0.8);
+  backdrop-filter: blur(16px);
+  z-index: 5;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--mint);
+  color: #06110c;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+.brand b {
+  display: block;
+  letter-spacing: -0.03em;
+}
+.brand span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btn {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: #334048;
+}
+.btn.primary {
+  background: var(--mint);
+  color: #06110c;
+  border-color: transparent;
+  font-weight: 700;
+}
+.btn.ghost {
+  background: transparent;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.user img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 22px 80px;
+}
+.hero h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  letter-spacing: -0.045em;
+  margin: 0 0 12px;
+  line-height: 1.05;
+}
+.hero p {
+  color: var(--muted);
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.hero .row {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 210px;
+}
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  flex: 1;
+}
+.meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--muted);
+}
+.pill {
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  max-width: 640px;
+  box-shadow: var(--shadow);
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 14px 0 6px;
+}
+input,
+textarea {
+  width: 100%;
+  background: #0b1014;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.drop {
+  border: 1px dashed #2a3842;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  cursor: pointer;
+}
+.drop.hot {
+  border-color: var(--mint);
+  color: var(--mint);
+}
+.note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 10px;
+}
+.err {
+  color: var(--danger);
+  margin-top: 12px;
+}
+.ok {
+  color: var(--mint);
+}
+.progress {
+  height: 8px;
+  background: #0b1014;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+.progress > i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--mint);
+}
+.banner {
+  background: #14110a;
+  border: 1px solid #3a3018;
+  color: #f0d9a0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
