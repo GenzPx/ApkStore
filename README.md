@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="ApkStore" width="720">
+</p>
+
 # APKstore
 
 Mini Android app store. Users **login with GitHub**, upload an **APK**, and it becomes a **GitHub Release**. The public store lists every public repo tagged `netlify-apk-store`.
